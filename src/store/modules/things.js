@@ -26,11 +26,12 @@ export default {
         : 1
       state.list.push({
         name: payLoad,
-        isDone: false,
+        done: false,
         id
       })
     },
     delThings(state, payLoad) {
+      // state.list = state.list.filter((ele) => ele.id !== payLoad)
       const index = state.list.findIndex((ele) => ele.id === payLoad)
       state.list.splice(index, 1)
     }
